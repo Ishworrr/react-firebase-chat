@@ -1,10 +1,7 @@
 import List from "./components/list/List";
 import Detail from "./components/details/Detail";
 
-import Chat from "./components/chat/chat";
-
-import ChatList from "./components/chatList/ChatList";
-import Userinfo from "./components/list/Userinfo/Userinfo";
+import Chat from "./components/chat/Chat";
 
 const App = () => {
   return (
@@ -12,8 +9,6 @@ const App = () => {
       <List />
       <Chat />
       <Detail />
-      <ChatList />
-      <Userinfo />
     </div>
   );
 };

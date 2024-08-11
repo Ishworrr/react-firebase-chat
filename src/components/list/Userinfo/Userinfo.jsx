@@ -1,10 +1,10 @@
 import React from "react";
+import "./UserInfo.css";
 
 const Userinfo = () => {
   return (
     <div className="userInfo">
-      userInfo
-      <div className="users">
+      <div className="user">
         <img src="./avatar.png" alt="" />
         <h2>John</h2>
       </div>
