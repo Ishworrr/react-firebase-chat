@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./chat.css";
 import EmojiPicker from "emoji-picker-react";
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
+
+  const endRef = useRef(null);
+
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
   const handleEmoji = (e) => {
     setText((prev) => prev + e.emoji);
     setOpen(false);
@@ -61,7 +67,7 @@ const Chat = () => {
         <div className="message own">
           <div className="texts">
             <img
-              src="https://static.wikia.nocookie.net/dragonball/images/b/ba/Goku_anime_profile.png/revision/latest?cb=20240723150655"
+              src="https://i.pinimg.com/564x/66/39/3c/66393c7bf72ac71bd1fc070be8b9cd52.jpg"
               alt=""
             />
             <p>
@@ -90,6 +96,7 @@ const Chat = () => {
             <span>1min ago</span>
           </div>
         </div>
+        <div ref={endRef}></div>
       </div>
       <div className="bottom">
         <div className="icons">

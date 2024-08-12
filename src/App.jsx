@@ -1,6 +1,5 @@
 import List from "./components/list/List";
 import Detail from "./components/details/Detail";
-
 import Chat from "./components/chat/Chat";
 
 const App = () => {
