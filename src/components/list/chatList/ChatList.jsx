@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./chatList.css";
-import AddUser from "./addUser/AddUser";
+import AddUser from "./addUser/addUser";
 import { db } from "../../../lib/firebase";
 
 import { useUserStore } from "../../../lib/userStore";
@@ -14,7 +14,7 @@ const ChatList = () => {
     const unSub = onSnapshot(
       doc(db, "userchats", currentUser.id),
       async (res) => {
-        console.log('Current data"', doc.data());
+        // console.log('Current data"', doc.data());
         const items = res.data().chats;
 
         const promises = items.map(async (item) => {
