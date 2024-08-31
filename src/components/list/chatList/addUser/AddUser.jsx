@@ -54,7 +54,7 @@ const AddUser = () => {
   };
   return (
     <div className="addUser">
-      <form onSubmit="handleSearch">
+      <form onSubmit={handleSearch}>
         <input type="text" placeholder="Username" name="username" />
         <button>Search</button>
       </form>
@@ -64,7 +64,7 @@ const AddUser = () => {
             <img src={user.avatar || "./avatar.png"} alt="" />
             <span>{user.username}</span>
           </div>
-          <button>Add User</button>
+          <button onClick={handleAdd}>Add User</button>
         </div>
       )}
     </div>
